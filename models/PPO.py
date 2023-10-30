@@ -3,6 +3,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 from torch.distributions.normal import Normal
+import os
 
 def layer_init(layer, std=np.sqrt(2), bias_const=0.0):
     torch.nn.init.orthogonal_(layer.weight, std)
@@ -16,9 +17,15 @@ class CriticNetwork(nn.Module):
         self.backbone = nn.Sequential(
             layer_init(nn.Linear(input_dim, 64)),
             nn.Tanh(),
-            layer_init(nn.Linear(64, 16)),
+            layer_init(nn.Linear(64, 64)),
             nn.Tanh(),
-            layer_init(nn.Linear(16, 1), std=1.0),
+            layer_init(nn.Linear(64, 64)),
+            nn.Tanh(),
+            layer_init(nn.Linear(64, 64)),
+            nn.Tanh(),
+            layer_init(nn.Linear(64, 64)),
+            nn.Tanh(),
+            layer_init(nn.Linear(64, 1), std=1.0),
         )
 
     def forward(self, x) -> torch.tensor:
@@ -30,9 +37,17 @@ class PolicyNetwork(nn.Module):
         self.mean_network = nn.Sequential(
             layer_init(nn.Linear(input_dim, 64)),
             nn.Tanh(),
-            layer_init(nn.Linear(64, 16)),
+            layer_init(nn.Linear(64, 64)),
             nn.Tanh(),
-            layer_init(nn.Linear(16, output_dim), std=1.0),
+            layer_init(nn.Linear(64, 64)),
+            nn.Tanh(),
+            layer_init(nn.Linear(64, 64)),
+            nn.Tanh(),
+            layer_init(nn.Linear(64, 64)),
+            nn.Tanh(),
+            layer_init(nn.Linear(64, 64)),
+            nn.Tanh(),
+            layer_init(nn.Linear(64, output_dim), std=1.0),
         )
 
         self.actor_logstd = nn.Parameter(torch.zeros(1, np.prod(output_dim)))
@@ -67,6 +82,8 @@ class PPO(nn.Module):
 
 
     def save(self, base_location: str):
+        if not os.path.exists(base_location):
+            os.makedirs(base_location)
         torch.save(self.policy, f"{base_location}/policy.pt")
         torch.save(self.critic, f"{base_location}/critic.pt")
 

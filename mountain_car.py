@@ -5,6 +5,7 @@ import numpy as np
 import random
 import torch
 import gymnasium as gym
+from tqdm import tqdm
 import wandb
 import torch.nn as nn
 from torch.utils.tensorboard import SummaryWriter
@@ -47,6 +48,10 @@ def parse_args():
         help="the maximum norm for the gradient clipping")
     parser.add_argument("--target-kl", type=float, default=None,
         help="the target KL divergence threshold")
+    parser.add_argument("--anneal-lr", type=bool, default=True,
+        help="the target KL divergence threshold")
+    parser.add_argument("--learning-rate", type=float, default=3e-4,
+        help="the learning rate of the optimizer")
     parser.add_argument("--num-envs", type=int, default=5,
         help="the number of parallel game environments")
     args = parser.parse_args()
@@ -109,8 +114,9 @@ action_space_dims = np.prod(envs.single_action_space.shape)
 
 
 agent = PPO(obs_space_dims, action_space_dims).to(device)
+lr = args.learning_rate
 
-optimizer = torch.optim.Adam(agent.parameters(), lr=3e-4, eps=1e-5)
+optimizer = torch.optim.Adam(agent.parameters(), lr=lr, eps=1e-5)
 
 
 obs = torch.zeros((args.num_steps, args.num_envs) + envs.single_observation_space.shape).to(device)
@@ -128,14 +134,14 @@ num_updates = args.total_timesteps // args.batch_size
 
 for update in range(1, num_updates + 1):
     # Annealing the rate if instructed to do so.
-    # if args.anneal_lr:
-    #     frac = 1.0 - (update - 1.0) / num_updates
-    #     lrnow = frac * args.learning_rate
-    #     optimizer.param_groups[0]["lr"] = lrnow
+    if args.anneal_lr:
+        frac = 1.0 - (update - 1.0) / num_updates
+        lrnow = frac * args.learning_rate
+        optimizer.param_groups[0]["lr"] = lrnow
 
     # ROLLOUT STAGE
     # No updates yet, we collect into batches and train later
-    for step in range(0, args.num_steps):
+    for step in tqdm(range(0, args.num_steps)):
         global_step += 1 * args.num_envs
         obs[step] = next_obs
         dones[step] = next_done
@@ -267,7 +273,7 @@ for update in range(1, num_updates + 1):
         writer.add_scalar("losses/approx_kl", approx_kl.item(), global_step)
         writer.add_scalar("losses/clipfrac", np.mean(clipfracs), global_step)
         writer.add_scalar("losses/explained_variance", explained_var, global_step)
-        print("SPS:", int(global_step / (time.time() - start_time)))
+        # print("SPS:", int(global_step / (time.time() - start_time)))
         writer.add_scalar("charts/SPS", int(global_step / (time.time() - start_time)), global_step)
 
 

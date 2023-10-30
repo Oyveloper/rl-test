@@ -1,0 +1,28 @@
+/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/record_video.py:94: UserWarning: [33mWARN: Overwriting existing videos at /Users/oyvind/code/skole/master/rl-test/videos/ppo-mountain-car-continuous folder (try specifying a different `video_folder` for the `RecordVideo` wrapper if this is not desired)
+  logger.warn(
+SPS: 6
+SPS: 8
+SPS: 9
+SPS: 10
+SPS: 10
+SPS: 10
+SPS: 10
+SPS: 10
+SPS: 10
+SPS: 10
+SPS: 10
+SPS: 10
+SPS: 10
+SPS: 10
+SPS: 10
+SPS: 10
+SPS: 10
+Traceback (most recent call last):
+  File "/Users/oyvind/code/skole/master/rl-test/mountain_car.py", line 271, in <module>
+    writer.add_scalar("losses/entropy", entropy_loss.item(), global_step)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/torch/utils/tensorboard/writer.py", line 391, in add_scalar
+    self._get_file_writer().add_summary(summary, global_step, walltime)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/torch/utils/tensorboard/writer.py", line 112, in add_summary
+    event = event_pb2.Event(summary=summary)
+KeyboardInterrupt
+SPS: 10

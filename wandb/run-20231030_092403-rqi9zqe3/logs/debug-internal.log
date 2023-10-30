@@ -1,0 +1,592 @@
+2023-10-30 09:24:03,089 INFO    StreamThr :14018 [internal.py:wandb_internal():86] W&B internal server running at pid: 14018, started at: 2023-10-30 09:24:03.088529
+2023-10-30 09:24:03,090 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: status
+2023-10-30 09:24:03,092 INFO    WriterThread:14018 [datastore.py:open_for_write():85] open: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/run-rqi9zqe3.wandb
+2023-10-30 09:24:03,092 DEBUG   SenderThread:14018 [sender.py:send():380] send: header
+2023-10-30 09:24:03,143 DEBUG   SenderThread:14018 [sender.py:send():380] send: run
+2023-10-30 09:24:03,655 INFO    SenderThread:14018 [dir_watcher.py:__init__():211] watching files in: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files
+2023-10-30 09:24:03,656 INFO    SenderThread:14018 [sender.py:_start_run_threads():1122] run started: rqi9zqe3 with start time 1698654243.089692
+2023-10-30 09:24:03,663 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: check_version
+2023-10-30 09:24:03,663 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: check_version
+2023-10-30 09:24:03,776 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: run_start
+2023-10-30 09:24:03,806 DEBUG   HandlerThread:14018 [system_info.py:__init__():32] System info init
+2023-10-30 09:24:03,806 DEBUG   HandlerThread:14018 [system_info.py:__init__():47] System info init done
+2023-10-30 09:24:03,806 INFO    HandlerThread:14018 [system_monitor.py:start():194] Starting system monitor
+2023-10-30 09:24:03,806 INFO    SystemMonitor:14018 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-10-30 09:24:03,806 INFO    HandlerThread:14018 [system_monitor.py:probe():214] Collecting system info
+2023-10-30 09:24:03,807 INFO    SystemMonitor:14018 [interfaces.py:start():190] Started cpu monitoring
+2023-10-30 09:24:03,807 INFO    SystemMonitor:14018 [interfaces.py:start():190] Started disk monitoring
+2023-10-30 09:24:03,807 DEBUG   HandlerThread:14018 [system_info.py:probe():196] Probing system
+2023-10-30 09:24:03,811 INFO    SystemMonitor:14018 [interfaces.py:start():190] Started gpuapple monitoring
+2023-10-30 09:24:03,812 INFO    SystemMonitor:14018 [interfaces.py:start():190] Started memory monitoring
+2023-10-30 09:24:03,813 INFO    SystemMonitor:14018 [interfaces.py:start():190] Started network monitoring
+2023-10-30 09:24:03,914 DEBUG   HandlerThread:14018 [system_info.py:_probe_git():181] Probing git
+2023-10-30 09:24:03,969 DEBUG   HandlerThread:14018 [system_info.py:_probe_git():189] Probing git done
+2023-10-30 09:24:03,969 DEBUG   HandlerThread:14018 [system_info.py:probe():244] Probing system done
+2023-10-30 09:24:03,969 DEBUG   HandlerThread:14018 [system_monitor.py:probe():223] {'os': 'macOS-13.5.2-arm64-arm-64bit', 'python': '3.10.13', 'heartbeatAt': '2023-10-30T08:24:03.811081', 'startedAt': '2023-10-30T08:24:03.082194', 'docker': None, 'cuda': None, 'args': ('--total-timesteps', '20000'), 'state': 'running', 'program': '/Users/oyvind/code/skole/master/rl-test/mountain_car.py', 'codePathLocal': 'mountain_car.py', 'codePath': 'mountain_car.py', 'git': {'remote': 'git@github.com:Oyveloper/rl-test.git', 'commit': 'ce100fccc38ae4fddf1a6b9ccb884d8e3275bc86'}, 'email': 'yvind.monsen@gmail.com', 'root': '/Users/oyvind/code/skole/master/rl-test', 'host': 'testing.local', 'username': 'oyvind', 'executable': '/Users/oyvind/code/skole/master/rl-test/.venv/bin/python', 'cpu_count': 8, 'cpu_count_logical': 8, 'disk': {'/': {'total': 926.3517189025879, 'used': 8.542999267578125}}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2023-10-30 09:24:03,969 INFO    HandlerThread:14018 [system_monitor.py:probe():224] Finished collecting system info
+2023-10-30 09:24:03,969 INFO    HandlerThread:14018 [system_monitor.py:probe():227] Publishing system info
+2023-10-30 09:24:03,970 DEBUG   HandlerThread:14018 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-10-30 09:24:03,970 DEBUG   HandlerThread:14018 [system_info.py:_save_pip():68] Saving pip packages done
+2023-10-30 09:24:03,970 INFO    HandlerThread:14018 [system_monitor.py:probe():229] Finished publishing system info
+2023-10-30 09:24:03,973 DEBUG   SenderThread:14018 [sender.py:send():380] send: files
+2023-10-30 09:24:03,973 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2023-10-30 09:24:03,976 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-30 09:24:03,976 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: stop_status
+2023-10-30 09:24:03,977 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-30 09:24:03,977 INFO    HandlerThread:14018 [handler.py:handle_tbrecord():764] handling tbrecord: tbrecord {
+  log_dir: "runs/ppo-mountain-car-continuous"
+  save: true
+}
+control {
+  relay_id: "7e94b0aa45624bd5a2e35210cb49fab9"
+}
+_info {
+  stream_id: "rqi9zqe3"
+}
+
+2023-10-30 09:24:03,977 DEBUG   HandlerThread:14018 [config_util.py:dict_from_config_file():101] no default config file found in config-defaults.yaml
+2023-10-30 09:24:04,252 DEBUG   SenderThread:14018 [sender.py:send():380] send: telemetry
+2023-10-30 09:24:04,253 DEBUG   SenderThread:14018 [sender.py:send():380] send: tbrecord
+2023-10-30 09:24:04,253 DEBUG   SenderThread:14018 [sender.py:send():380] send: files
+2023-10-30 09:24:04,253 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file events.out.tfevents.1698654243.testing.local.13976.0 with policy live
+2023-10-30 09:24:04,648 INFO    wandb-upload_0:14018 [upload_job.py:push():131] Uploaded file /var/folders/qb/7g894g8949v8wktrvqzqx7dm0000gn/T/tmpfn0jd83gwandb/xpoklkju-wandb-metadata.json
+2023-10-30 09:24:04,657 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/requirements.txt
+2023-10-30 09:24:04,657 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-metadata.json
+2023-10-30 09:24:04,657 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:04,658 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:04,751 INFO    wandb-upload_1:14018 [upload_job.py:push():131] Uploaded file /var/folders/qb/7g894g8949v8wktrvqzqx7dm0000gn/T/tmpfn0jd83gwandb/grscfkaz-events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:05,661 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:06,663 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:06,663 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:07,668 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:08,303 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: status_report
+2023-10-30 09:24:08,673 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:08,673 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:09,679 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:10,684 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:10,685 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:11,689 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:12,695 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:12,695 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:13,614 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: status_report
+2023-10-30 09:24:13,695 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:14,077 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,077 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,078 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,079 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,079 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,079 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,079 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,079 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,079 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,079 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,080 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,080 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,080 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,080 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,080 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,080 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,080 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,080 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,080 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,081 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,081 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,081 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,081 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,081 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,081 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,081 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,081 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,082 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,082 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,082 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,082 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,082 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,082 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,082 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,082 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,082 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,082 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,082 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,083 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,083 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,083 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,083 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,083 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,083 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,083 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,083 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,083 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,083 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,084 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,084 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,084 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,084 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,084 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,084 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,084 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,084 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,085 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,085 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,085 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,085 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,085 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,085 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,085 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,085 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:14,085 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:14,085 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:14,697 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:14,698 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:14,698 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:15,067 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:15,067 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:15,068 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:15,068 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:15,068 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:15,068 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:15,703 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:15,703 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:16,072 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:16,072 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:16,073 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:16,073 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:16,073 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:16,073 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:16,708 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:16,708 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:16,708 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:17,081 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:17,081 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:17,081 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:17,081 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:17,082 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:17,082 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:17,082 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:17,082 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:17,082 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:17,713 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:17,714 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:18,088 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:18,089 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:18,089 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:18,089 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:18,089 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:18,090 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:18,719 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:18,719 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:18,719 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:18,804 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: status_report
+2023-10-30 09:24:18,978 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-30 09:24:18,978 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: stop_status
+2023-10-30 09:24:18,979 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-30 09:24:19,187 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:19,187 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:19,188 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:19,188 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:19,189 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:19,189 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:19,722 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:19,722 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:20,105 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:20,105 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:20,106 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:20,106 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:20,106 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:20,107 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:20,727 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:20,727 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:20,727 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:21,113 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:21,114 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:21,114 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:21,114 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:21,114 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:21,114 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:21,115 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:21,115 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:21,115 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:21,733 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:21,733 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:22,116 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:22,116 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:22,117 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:22,117 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:22,117 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:22,117 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:22,738 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:22,738 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:22,738 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:23,124 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:23,124 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:23,125 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:23,125 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:23,125 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:23,125 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:23,743 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:23,743 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:24,023 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: status_report
+2023-10-30 09:24:24,130 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:24,130 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:24,131 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:24,131 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:24,131 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:24,132 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:24,132 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:24,132 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:24,132 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:24,747 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:24,748 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:24,748 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:25,137 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:25,137 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:25,137 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:25,137 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:25,137 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:25,137 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:25,753 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:25,753 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:26,144 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:26,145 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:26,145 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:26,145 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:26,145 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:26,145 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:26,758 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:26,758 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:26,758 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:27,153 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:27,153 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:27,154 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:27,154 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:27,154 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:27,154 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:27,764 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:27,764 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:28,163 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:28,164 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:28,164 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:28,165 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:28,165 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:28,165 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:28,765 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:28,765 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:28,765 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:29,168 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:29,168 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:29,168 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: status_report
+2023-10-30 09:24:29,169 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:29,169 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:29,169 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:29,169 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:29,770 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:29,771 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:30,175 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:30,175 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:30,175 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:30,176 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:30,176 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:30,176 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:30,776 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:30,776 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:30,776 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:31,186 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:31,186 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:31,187 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:31,187 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:31,187 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:31,187 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:31,188 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:31,188 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:31,188 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:31,781 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:31,781 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:32,191 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:32,192 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:32,192 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:32,192 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:32,192 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:32,193 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:32,782 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:32,782 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:32,782 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:33,199 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:33,199 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:33,200 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:33,200 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:33,200 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:33,200 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:33,787 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:33,787 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:33,981 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: stop_status
+2023-10-30 09:24:33,981 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: stop_status
+2023-10-30 09:24:33,983 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-30 09:24:34,550 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: status_report
+2023-10-30 09:24:34,792 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:34,792 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:34,873 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:34,873 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:34,874 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:34,874 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:34,874 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:34,874 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:35,214 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:35,214 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:35,214 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:35,214 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:35,214 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:35,215 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:35,215 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:35,215 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:35,215 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:35,797 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/config.yaml
+2023-10-30 09:24:35,798 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:35,798 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:36,221 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:36,221 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:36,221 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:36,222 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:36,222 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:36,222 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:36,803 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:36,803 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:36,803 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:37,229 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:37,229 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:37,230 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:37,230 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:37,230 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:37,230 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:37,808 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:37,808 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:38,237 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:38,238 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:38,238 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:38,238 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:38,238 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:38,239 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:38,239 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:38,239 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:38,239 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:38,809 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:38,810 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:38,810 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:39,242 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:39,243 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:39,243 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:39,243 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:39,244 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:39,244 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:39,815 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:39,815 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:40,249 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:40,249 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:40,249 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: status_report
+2023-10-30 09:24:40,250 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:40,820 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:40,820 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:40,820 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:41,253 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:41,253 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:41,254 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:41,254 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:41,254 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:41,254 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:41,254 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:41,254 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:41,254 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:41,825 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:41,825 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:42,257 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:42,258 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:42,258 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:42,258 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:42,258 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:42,258 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:42,830 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:42,831 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:42,831 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:43,263 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:43,263 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:43,263 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:43,264 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:43,264 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:43,264 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:43,836 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:43,836 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:44,270 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:44,270 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:44,271 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:44,271 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:44,271 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:44,271 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:44,841 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:44,841 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:44,841 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:45,277 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:45,277 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:45,277 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: status_report
+2023-10-30 09:24:45,278 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:45,278 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:45,278 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:45,279 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:45,846 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:45,846 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:46,284 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:46,284 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:46,285 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:46,285 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:46,285 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:46,285 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:46,285 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:46,286 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:46,286 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:46,315 DEBUG   SenderThread:14018 [sender.py:send():380] send: exit
+2023-10-30 09:24:46,315 INFO    SenderThread:14018 [sender.py:send_exit():585] handling exit code: 255
+2023-10-30 09:24:46,315 INFO    SenderThread:14018 [sender.py:send_exit():587] handling runtime: 42
+2023-10-30 09:24:46,315 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:46,315 INFO    SenderThread:14018 [sender.py:send_exit():593] send defer
+2023-10-30 09:24:46,315 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: defer
+2023-10-30 09:24:46,315 INFO    HandlerThread:14018 [handler.py:handle_request_defer():172] handle defer: 0
+2023-10-30 09:24:46,316 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: defer
+2023-10-30 09:24:46,316 INFO    SenderThread:14018 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-10-30 09:24:46,316 INFO    SenderThread:14018 [sender.py:transition_state():613] send defer: 1
+2023-10-30 09:24:46,316 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: defer
+2023-10-30 09:24:46,316 INFO    HandlerThread:14018 [handler.py:handle_request_defer():172] handle defer: 1
+2023-10-30 09:24:46,316 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: defer
+2023-10-30 09:24:46,316 INFO    SenderThread:14018 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-10-30 09:24:46,316 INFO    SenderThread:14018 [sender.py:transition_state():613] send defer: 2
+2023-10-30 09:24:46,316 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: defer
+2023-10-30 09:24:46,316 INFO    HandlerThread:14018 [handler.py:handle_request_defer():172] handle defer: 2
+2023-10-30 09:24:46,316 INFO    HandlerThread:14018 [system_monitor.py:finish():203] Stopping system monitor
+2023-10-30 09:24:46,316 DEBUG   SystemMonitor:14018 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-10-30 09:24:46,316 DEBUG   SystemMonitor:14018 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-10-30 09:24:46,316 DEBUG   SystemMonitor:14018 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-10-30 09:24:46,317 INFO    HandlerThread:14018 [interfaces.py:finish():202] Joined cpu monitor
+2023-10-30 09:24:46,317 INFO    HandlerThread:14018 [interfaces.py:finish():202] Joined disk monitor
+2023-10-30 09:24:46,317 INFO    HandlerThread:14018 [interfaces.py:finish():202] Joined gpuapple monitor
+2023-10-30 09:24:46,317 INFO    HandlerThread:14018 [interfaces.py:finish():202] Joined memory monitor
+2023-10-30 09:24:46,317 INFO    HandlerThread:14018 [interfaces.py:finish():202] Joined network monitor
+2023-10-30 09:24:46,317 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: defer
+2023-10-30 09:24:46,317 INFO    SenderThread:14018 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-10-30 09:24:46,317 INFO    SenderThread:14018 [sender.py:transition_state():613] send defer: 3
+2023-10-30 09:24:46,317 DEBUG   SenderThread:14018 [sender.py:send():380] send: telemetry
+2023-10-30 09:24:46,317 DEBUG   SenderThread:14018 [sender.py:send():380] send: stats
+2023-10-30 09:24:46,317 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: defer
+2023-10-30 09:24:46,317 INFO    HandlerThread:14018 [handler.py:handle_request_defer():172] handle defer: 3
+2023-10-30 09:24:46,317 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: defer
+2023-10-30 09:24:46,317 INFO    SenderThread:14018 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-10-30 09:24:46,317 INFO    SenderThread:14018 [sender.py:transition_state():613] send defer: 4
+2023-10-30 09:24:46,317 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: defer
+2023-10-30 09:24:46,317 INFO    HandlerThread:14018 [handler.py:handle_request_defer():172] handle defer: 4
+2023-10-30 09:24:46,853 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:46,854 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:46,854 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:48,861 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:53,302 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: poll_exit
+2023-10-30 09:24:53,302 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: defer
+2023-10-30 09:24:53,303 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: status_report
+2023-10-30 09:24:53,303 INFO    SenderThread:14018 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-10-30 09:24:53,303 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: keepalive
+2023-10-30 09:24:53,304 INFO    SenderThread:14018 [sender.py:transition_state():613] send defer: 5
+2023-10-30 09:24:53,304 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: poll_exit
+2023-10-30 09:24:53,305 DEBUG   SenderThread:14018 [sender.py:send():380] send: history
+2023-10-30 09:24:53,305 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: defer
+2023-10-30 09:24:53,305 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: summary_record
+2023-10-30 09:24:53,305 INFO    HandlerThread:14018 [handler.py:handle_request_defer():172] handle defer: 5
+2023-10-30 09:24:53,307 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:53,307 DEBUG   SenderThread:14018 [sender.py:send():380] send: summary
+2023-10-30 09:24:53,308 INFO    SenderThread:14018 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2023-10-30 09:24:53,308 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: defer
+2023-10-30 09:24:53,308 INFO    SenderThread:14018 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-10-30 09:24:53,308 INFO    SenderThread:14018 [sender.py:transition_state():613] send defer: 6
+2023-10-30 09:24:53,308 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: defer
+2023-10-30 09:24:53,308 INFO    HandlerThread:14018 [handler.py:handle_request_defer():172] handle defer: 6
+2023-10-30 09:24:53,309 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: defer
+2023-10-30 09:24:53,309 INFO    SenderThread:14018 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-10-30 09:24:53,314 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: status_report
+2023-10-30 09:24:53,549 INFO    SenderThread:14018 [sender.py:transition_state():613] send defer: 7
+2023-10-30 09:24:53,549 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: defer
+2023-10-30 09:24:53,549 INFO    HandlerThread:14018 [handler.py:handle_request_defer():172] handle defer: 7
+2023-10-30 09:24:53,549 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: defer
+2023-10-30 09:24:53,549 INFO    SenderThread:14018 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-10-30 09:24:53,891 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/config.yaml
+2023-10-30 09:24:53,892 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:54,374 INFO    SenderThread:14018 [sender.py:transition_state():613] send defer: 8
+2023-10-30 09:24:54,375 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: defer
+2023-10-30 09:24:54,375 INFO    HandlerThread:14018 [handler.py:handle_request_defer():172] handle defer: 8
+2023-10-30 09:24:54,375 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: defer
+2023-10-30 09:24:54,376 INFO    SenderThread:14018 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-10-30 09:24:54,376 INFO    SenderThread:14018 [job_builder.py:build():281] Attempting to build job artifact
+2023-10-30 09:24:54,377 INFO    SenderThread:14018 [job_builder.py:_get_source_type():393] is repo sourced job
+2023-10-30 09:24:54,380 INFO    SenderThread:14018 [job_builder.py:build():369] adding wandb-job metadata file
+2023-10-30 09:24:54,385 INFO    SenderThread:14018 [sender.py:transition_state():613] send defer: 9
+2023-10-30 09:24:54,385 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: defer
+2023-10-30 09:24:54,385 INFO    HandlerThread:14018 [handler.py:handle_request_defer():172] handle defer: 9
+2023-10-30 09:24:54,386 DEBUG   SenderThread:14018 [sender.py:send():380] send: artifact
+2023-10-30 09:24:54,894 INFO    Thread-12 :14018 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:55,340 INFO    SenderThread:14018 [sender.py:send_artifact():1456] sent artifact job-git_github.com_Oyveloper_rl-test.git_mountain_car.py - {'id': 'QXJ0aWZhY3Q6NjIxNzQwNjYw', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjExMTExMDUyMA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NjIxNzQxMzAx', 'versionIndex': 3}}}
+2023-10-30 09:24:55,340 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: defer
+2023-10-30 09:24:55,340 INFO    SenderThread:14018 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-10-30 09:24:55,340 INFO    SenderThread:14018 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-10-30 09:24:55,897 INFO    SenderThread:14018 [dir_watcher.py:finish():388] scan: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files
+2023-10-30 09:24:55,897 INFO    SenderThread:14018 [dir_watcher.py:finish():402] scan save: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/requirements.txt requirements.txt
+2023-10-30 09:24:55,898 INFO    SenderThread:14018 [dir_watcher.py:finish():402] scan save: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log output.log
+2023-10-30 09:24:55,902 INFO    SenderThread:14018 [dir_watcher.py:finish():402] scan save: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/config.yaml config.yaml
+2023-10-30 09:24:55,902 INFO    SenderThread:14018 [dir_watcher.py:finish():402] scan save: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json wandb-summary.json
+2023-10-30 09:24:55,902 INFO    SenderThread:14018 [dir_watcher.py:finish():402] scan save: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/events.out.tfevents.1698654243.testing.local.13976.0 events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:55,902 INFO    SenderThread:14018 [dir_watcher.py:finish():402] scan save: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-metadata.json wandb-metadata.json
+2023-10-30 09:24:55,902 INFO    SenderThread:14018 [sender.py:transition_state():613] send defer: 10
+2023-10-30 09:24:55,903 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: defer
+2023-10-30 09:24:55,904 INFO    HandlerThread:14018 [handler.py:handle_request_defer():172] handle defer: 10
+2023-10-30 09:24:55,905 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: defer
+2023-10-30 09:24:55,905 INFO    SenderThread:14018 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-10-30 09:24:55,905 INFO    SenderThread:14018 [file_pusher.py:finish():175] shutting down file pusher
+2023-10-30 09:24:56,369 INFO    wandb-upload_0:14018 [upload_job.py:push():131] Uploaded file /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/requirements.txt
+2023-10-30 09:24:56,370 INFO    wandb-upload_1:14018 [upload_job.py:push():131] Uploaded file /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/output.log
+2023-10-30 09:24:56,631 INFO    wandb-upload_3:14018 [upload_job.py:push():131] Uploaded file /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/wandb-summary.json
+2023-10-30 09:24:56,641 INFO    wandb-upload_2:14018 [upload_job.py:push():131] Uploaded file /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/files/config.yaml
+2023-10-30 09:24:56,752 INFO    wandb-upload_4:14018 [upload_job.py:push():131] Uploaded file /var/folders/qb/7g894g8949v8wktrvqzqx7dm0000gn/T/tmpfn0jd83gwandb/tyudrlw3-events.out.tfevents.1698654243.testing.local.13976.0
+2023-10-30 09:24:56,968 INFO    Thread-11 (_thread_body):14018 [sender.py:transition_state():613] send defer: 11
+2023-10-30 09:24:56,969 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: defer
+2023-10-30 09:24:56,969 INFO    HandlerThread:14018 [handler.py:handle_request_defer():172] handle defer: 11
+2023-10-30 09:24:56,970 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: defer
+2023-10-30 09:24:56,970 INFO    SenderThread:14018 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-10-30 09:24:56,970 INFO    SenderThread:14018 [file_pusher.py:join():181] waiting for file pusher
+2023-10-30 09:24:56,970 INFO    SenderThread:14018 [sender.py:transition_state():613] send defer: 12
+2023-10-30 09:24:56,970 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: defer
+2023-10-30 09:24:56,970 INFO    HandlerThread:14018 [handler.py:handle_request_defer():172] handle defer: 12
+2023-10-30 09:24:56,970 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: defer
+2023-10-30 09:24:56,970 INFO    SenderThread:14018 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-10-30 09:24:56,970 INFO    SenderThread:14018 [file_stream.py:finish():595] file stream finish called
+2023-10-30 09:24:57,170 INFO    SenderThread:14018 [file_stream.py:finish():599] file stream finish is done
+2023-10-30 09:24:57,170 INFO    SenderThread:14018 [sender.py:transition_state():613] send defer: 13
+2023-10-30 09:24:57,170 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: defer
+2023-10-30 09:24:57,170 INFO    HandlerThread:14018 [handler.py:handle_request_defer():172] handle defer: 13
+2023-10-30 09:24:57,170 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: defer
+2023-10-30 09:24:57,170 INFO    SenderThread:14018 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-10-30 09:24:57,170 INFO    SenderThread:14018 [sender.py:transition_state():613] send defer: 14
+2023-10-30 09:24:57,170 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: defer
+2023-10-30 09:24:57,170 INFO    HandlerThread:14018 [handler.py:handle_request_defer():172] handle defer: 14
+2023-10-30 09:24:57,171 DEBUG   SenderThread:14018 [sender.py:send():380] send: final
+2023-10-30 09:24:57,171 DEBUG   SenderThread:14018 [sender.py:send():380] send: footer
+2023-10-30 09:24:57,171 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: defer
+2023-10-30 09:24:57,171 INFO    SenderThread:14018 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-10-30 09:24:57,171 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: poll_exit
+2023-10-30 09:24:57,171 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: poll_exit
+2023-10-30 09:24:57,171 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: server_info
+2023-10-30 09:24:57,172 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: server_info
+2023-10-30 09:24:57,173 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: get_summary
+2023-10-30 09:24:57,173 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: sampled_history
+2023-10-30 09:24:57,174 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: internal_messages
+2023-10-30 09:24:57,174 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: job_info
+2023-10-30 09:24:57,415 DEBUG   SenderThread:14018 [sender.py:send_request():407] send_request: job_info
+2023-10-30 09:24:57,416 INFO    MainThread:14018 [wandb_run.py:_footer_history_summary_info():3599] rendering history
+2023-10-30 09:24:57,417 INFO    MainThread:14018 [wandb_run.py:_footer_history_summary_info():3631] rendering summary
+2023-10-30 09:24:57,417 INFO    MainThread:14018 [wandb_run.py:_footer_sync_info():3558] logging synced files
+2023-10-30 09:24:57,418 DEBUG   HandlerThread:14018 [handler.py:handle_request():146] handle_request: shutdown
+2023-10-30 09:24:57,418 INFO    HandlerThread:14018 [handler.py:finish():866] shutting down handler
+2023-10-30 09:24:58,180 INFO    WriterThread:14018 [datastore.py:close():294] close: /Users/oyvind/code/skole/master/rl-test/wandb/run-20231030_092403-rqi9zqe3/run-rqi9zqe3.wandb
+2023-10-30 09:24:58,416 INFO    SenderThread:14018 [sender.py:finish():1534] shutting down sender
+2023-10-30 09:24:58,416 INFO    SenderThread:14018 [file_pusher.py:finish():175] shutting down file pusher
+2023-10-30 09:24:58,416 INFO    SenderThread:14018 [file_pusher.py:join():181] waiting for file pusher
