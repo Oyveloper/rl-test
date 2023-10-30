@@ -1,0 +1,19 @@
+/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.seed to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.seed` for environment variables or `env.get_wrapper_attr('seed')` that will search the reminding wrappers.
+  logger.warn(
+Traceback (most recent call last):
+  File "/Users/oyvind/code/skole/master/rl-test/mountain_car.py", line 101, in <module>
+    envs = gym.vector.SyncVectorEnv(
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/vector/sync_vector_env.py", line 53, in __init__
+    self.envs = [env_fn() for env_fn in env_fns]
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/vector/sync_vector_env.py", line 53, in <listcomp>
+    self.envs = [env_fn() for env_fn in env_fns]
+  File "/Users/oyvind/code/skole/master/rl-test/mountain_car.py", line 65, in thunk
+    env.seed(seed)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 315, in __getattr__
+    return getattr(self.env, name)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 315, in __getattr__
+    return getattr(self.env, name)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 315, in __getattr__
+    return getattr(self.env, name)
+  [Previous line repeated 7 more times]
+AttributeError: 'Continuous_MountainCarEnv' object has no attribute 'seed'

@@ -1,0 +1,31 @@
+/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/record_video.py:94: UserWarning: [33mWARN: Overwriting existing videos at /Users/oyvind/code/skole/master/rl-test/videos/ppo-mountain-car-continuous folder (try specifying a different `video_folder` for the `RecordVideo` wrapper if this is not desired)
+  logger.warn(
+Traceback (most recent call last):
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/monitoring/video_recorder.py", line 55, in __init__
+    import moviepy  # noqa: F401
+ModuleNotFoundError: No module named 'moviepy'
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "/Users/oyvind/code/skole/master/rl-test/mountain_car.py", line 122, in <module>
+    next_obs = torch.Tensor(envs.reset()).to(device)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/vector/vector_env.py", line 140, in reset
+    return self.reset_wait(seed=seed, options=options)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/vector/sync_vector_env.py", line 122, in reset_wait
+    observation, info = env.reset(**kwargs)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 467, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 467, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 515, in reset
+    obs, info = self.env.reset(seed=seed, options=options)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/normalize.py", line 90, in reset
+    obs, info = self.env.reset(**kwargs)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 467, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/record_video.py", line 129, in reset
+    self.start_video_recorder()
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/record_video.py", line 141, in start_video_recorder
+    self.video_recorder = video_recorder.VideoRecorder(
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/monitoring/video_recorder.py", line 57, in __init__
+    raise error.DependencyNotInstalled(
+gymnasium.error.DependencyNotInstalled: moviepy is not installed, run `pip install moviepy`

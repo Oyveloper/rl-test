@@ -1,0 +1,10 @@
+/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/envs/registration.py:521: UserWarning: [33mWARN: Using the latest versioned environment `HalfCheetah-v4` instead of the unversioned environment `HalfCheetah`.
+  logger.warn(
+/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/record_video.py:94: UserWarning: [33mWARN: Overwriting existing videos at /Users/oyvind/code/skole/master/rl-test/videos/ppo-mountain-car-continuous folder (try specifying a different `video_folder` for the `RecordVideo` wrapper if this is not desired)
+  logger.warn(
+/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/envs/registration.py:521: UserWarning: [33mWARN: Using the latest versioned environment `HalfCheetah-v4` instead of the unversioned environment `HalfCheetah`.
+  logger.warn(
+Traceback (most recent call last):
+  File "/Users/oyvind/code/skole/master/rl-test/mountain_car.py", line 163, in <module>
+    if "episode" in item.keys():
+AttributeError: 'str' object has no attribute 'keys'

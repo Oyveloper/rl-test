@@ -1,0 +1,28 @@
+1
+torch.Size([5, 2])
+torch.Size([5, 1])
+SPS: 4
+torch.Size([5, 2])
+torch.Size([5, 1])
+SPS: 6
+torch.Size([5, 2])
+torch.Size([5, 1])
+/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/record_video.py:94: UserWarning: [33mWARN: Overwriting existing videos at /Users/oyvind/code/skole/master/rl-test/videos/ppo-mountain-car-continuous folder (try specifying a different `video_folder` for the `RecordVideo` wrapper if this is not desired)
+  logger.warn(
+SPS: 8
+torch.Size([5, 2])
+torch.Size([5, 1])
+SPS: 8
+torch.Size([5, 2])
+torch.Size([5, 1])
+SPS: 9
+torch.Size([5, 2])
+torch.Size([5, 1])
+Traceback (most recent call last):
+  File "/Users/oyvind/code/skole/master/rl-test/mountain_car.py", line 251, in <module>
+    loss.backward()
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

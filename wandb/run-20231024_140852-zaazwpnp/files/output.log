@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/Users/oyvind/code/skole/master/rl-test/mountain_car.py", line 100, in <module>
+    envs = gym.vector.SyncVectorEnv(
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/vector/sync_vector_env.py", line 53, in __init__
+    self.envs = [env_fn() for env_fn in env_fns]
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/vector/sync_vector_env.py", line 53, in <listcomp>
+    self.envs = [env_fn() for env_fn in env_fns]
+  File "/Users/oyvind/code/skole/master/rl-test/mountain_car.py", line 57, in thunk
+    env = gym.envs.make("HalfCheeta", render_mode="rgb_array")
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/envs/registration.py", line 741, in make
+    env_spec = _find_spec(id)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/envs/registration.py", line 527, in _find_spec
+    _check_version_exists(ns, name, version)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/envs/registration.py", line 393, in _check_version_exists
+    _check_name_exists(ns, name)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/envs/registration.py", line 370, in _check_name_exists
+    raise error.NameNotFound(
+gymnasium.error.NameNotFound: Environment `HalfCheeta` doesn't exist. Did you mean: `HalfCheetah`?

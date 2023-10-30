@@ -1,0 +1,14 @@
+/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/record_video.py:94: UserWarning: [33mWARN: Overwriting existing videos at /Users/oyvind/code/skole/master/rl-test/videos/ppo-mountain-car-continuous folder (try specifying a different `video_folder` for the `RecordVideo` wrapper if this is not desired)
+  logger.warn(
+Traceback (most recent call last):
+  File "/Users/oyvind/code/skole/master/rl-test/mountain_car.py", line 142, in <module>
+    action, logprob, _, value = agent.sample_action(next_obs)
+  File "/Users/oyvind/code/skole/master/rl-test/models/PPO.py", line 58, in sample_action
+    action_mean, action_logstd = self.policy(observation)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/oyvind/code/skole/master/rl-test/models/PPO.py", line 43, in forward
+    action_logstd = self.policy.actor_logstd.expand_as(action_mean)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1265, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'PolicyNetwork' object has no attribute 'policy'

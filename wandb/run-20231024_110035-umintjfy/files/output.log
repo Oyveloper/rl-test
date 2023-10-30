@@ -1,0 +1,77 @@
+/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/record_video.py:94: UserWarning: [33mWARN: Overwriting existing videos at /Users/oyvind/code/skole/master/rl-test/videos/ppo-mountain-car-continuous folder (try specifying a different `video_folder` for the `RecordVideo` wrapper if this is not desired)
+  logger.warn(
+torch.Size([5, 2])
+SPS: 3
+torch.Size([5, 2])
+SPS: 6
+torch.Size([5, 2])
+SPS: 7
+torch.Size([5, 2])
+SPS: 8
+torch.Size([5, 2])
+SPS: 8
+torch.Size([5, 2])
+SPS: 9
+torch.Size([5, 2])
+SPS: 9
+torch.Size([5, 2])
+SPS: 9
+torch.Size([5, 2])
+SPS: 9
+torch.Size([5, 2])
+SPS: 10
+torch.Size([5, 2])
+SPS: 10
+torch.Size([5, 2])
+SPS: 10
+torch.Size([5, 2])
+SPS: 10
+torch.Size([5, 2])
+SPS: 10
+torch.Size([5, 2])
+SPS: 10
+torch.Size([5, 2])
+SPS: 10
+torch.Size([5, 2])
+SPS: 10
+torch.Size([5, 2])
+SPS: 10
+torch.Size([5, 2])
+SPS: 10
+torch.Size([5, 2])
+SPS: 10
+torch.Size([5, 2])
+SPS: 10
+torch.Size([5, 2])
+SPS: 11
+torch.Size([5, 2])
+SPS: 11
+torch.Size([5, 2])
+SPS: 11
+torch.Size([5, 2])
+SPS: 11
+torch.Size([5, 2])
+SPS: 11
+torch.Size([5, 2])
+SPS: 11
+torch.Size([5, 2])
+Traceback (most recent call last):
+  File "/Users/oyvind/code/skole/master/rl-test/mountain_car.py", line 206, in <module>
+    # calc prob ratio
+  File "/Users/oyvind/code/skole/master/rl-test/models/PPO.py", line 66, in sample_action
+    return action, probs.log_prob(action).sum(1), probs.entropy().sum(1), self.get_value(observation)
+  File "/Users/oyvind/code/skole/master/rl-test/models/PPO.py", line 54, in get_value
+    return self.critic(state)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/oyvind/code/skole/master/rl-test/models/PPO.py", line 25, in forward
+    return self.backbone(x)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/torch/nn/modules/activation.py", line 358, in forward
+    return torch.tanh(input)
+KeyboardInterrupt

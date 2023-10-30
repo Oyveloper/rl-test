@@ -1,0 +1,7 @@
+/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/record_video.py:94: UserWarning: [33mWARN: Overwriting existing videos at /Users/oyvind/code/skole/master/rl-test/videos/ppo-mountain-car-continuous folder (try specifying a different `video_folder` for the `RecordVideo` wrapper if this is not desired)
+  logger.warn(
+Traceback (most recent call last):
+  File "/Users/oyvind/code/skole/master/rl-test/mountain_car.py", line 145, in <module>
+    logprobs[step] = logprob
+RuntimeError: expand(torch.FloatTensor{[5, 1]}, size=[5]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (2)
+torch.Size([1, 5, 2])

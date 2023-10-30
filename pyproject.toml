@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "rl-test"
+version = "0.1.0"
+description = ""
+authors = ["Øyvind Monsen <yvind.monsen@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = {url = "https://files.pythonhosted.org/packages/79/b3/eaea3fc35d0466b9dae1e3f9db08467939347b3aaa53c0fd81953032db33/torch-1.13.0-cp310-none-macosx_11_0_arm64.whl"}
+moviepy = "^1.0.3"
+gymnasium = {extras = ["mujoco"], version = "^0.29.1"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

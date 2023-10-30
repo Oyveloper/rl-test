@@ -1,0 +1,37 @@
+{
+    "os": "macOS-13.5.2-arm64-arm-64bit",
+    "python": "3.10.13",
+    "heartbeatAt": "2023-10-24T08:52:57.669354",
+    "startedAt": "2023-10-24T08:52:56.974109",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/oyvind/code/skole/master/rl-test/mountain_car.py",
+    "codePathLocal": "mountain_car.py",
+    "codePath": "mountain_car.py",
+    "git": {
+        "remote": "git@github.com:Oyveloper/rl-test.git",
+        "commit": "9750d2209976682e8807ce697a139f25f9f2d72a"
+    },
+    "email": "yvind.monsen@gmail.com",
+    "root": "/Users/oyvind/code/skole/master/rl-test",
+    "host": "testing.local",
+    "username": "oyvind",
+    "executable": "/Users/oyvind/code/skole/master/rl-test/.venv/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "disk": {
+        "/": {
+            "total": 926.3517189025879,
+            "used": 8.542999267578125
+        }
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}

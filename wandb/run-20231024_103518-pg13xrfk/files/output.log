@@ -1,0 +1,43 @@
+/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/record_video.py:94: UserWarning: [33mWARN: Overwriting existing videos at /Users/oyvind/code/skole/master/rl-test/videos/ppo-mountain-car-continuous folder (try specifying a different `video_folder` for the `RecordVideo` wrapper if this is not desired)
+  logger.warn(
+Traceback (most recent call last):
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/envs/classic_control/continuous_mountain_car.py", line 205, in render
+    import pygame
+ModuleNotFoundError: No module named 'pygame'
+The above exception was the direct cause of the following exception:
+Traceback (most recent call last):
+  File "/Users/oyvind/code/skole/master/rl-test/mountain_car.py", line 122, in <module>
+    next_obs = torch.Tensor(envs.reset()).to(device)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/vector/vector_env.py", line 140, in reset
+    return self.reset_wait(seed=seed, options=options)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/vector/sync_vector_env.py", line 122, in reset_wait
+    observation, info = env.reset(**kwargs)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 467, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 467, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 515, in reset
+    obs, info = self.env.reset(seed=seed, options=options)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/normalize.py", line 90, in reset
+    obs, info = self.env.reset(**kwargs)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 467, in reset
+    return self.env.reset(seed=seed, options=options)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/record_video.py", line 129, in reset
+    self.start_video_recorder()
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/record_video.py", line 148, in start_video_recorder
+    self.video_recorder.capture_frame()
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/monitoring/video_recorder.py", line 113, in capture_frame
+    frame = self.env.render()
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 471, in render
+    return self.env.render()
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/core.py", line 471, in render
+    return self.env.render()
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/order_enforcing.py", line 70, in render
+    return self.env.render(*args, **kwargs)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/env_checker.py", line 65, in render
+    return env_render_passive_checker(self.env, *args, **kwargs)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/utils/passive_env_checker.py", line 362, in env_render_passive_checker
+    result = env.render()
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/envs/classic_control/continuous_mountain_car.py", line 208, in render
+    raise DependencyNotInstalled(
+gymnasium.error.DependencyNotInstalled: pygame is not installed, run `pip install gymnasium[classic-control]`

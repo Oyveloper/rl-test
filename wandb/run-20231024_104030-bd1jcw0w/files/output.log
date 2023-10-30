@@ -1,0 +1,20 @@
+/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/record_video.py:94: UserWarning: [33mWARN: Overwriting existing videos at /Users/oyvind/code/skole/master/rl-test/videos/ppo-mountain-car-continuous folder (try specifying a different `video_folder` for the `RecordVideo` wrapper if this is not desired)
+  logger.warn(
+/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/envs/classic_control/continuous_mountain_car.py:172: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  reward -= math.pow(action[0], 2) * 0.1
+/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/utils/passive_env_checker.py:159: UserWarning: [33mWARN: The obs returned by the `step()` method is not within the observation space.
+  logger.warn(f"{pre} is not within the observation space.")
+Traceback (most recent call last):
+  File "/Users/oyvind/code/skole/master/rl-test/mountain_car.py", line 156, in <module>
+    next_obs, reward, done, info = envs.step(action.cpu().numpy())
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/vector/vector_env.py", line 204, in step
+    return self.step_wait()
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/vector/sync_vector_env.py", line 158, in step_wait
+    self.observations = concatenate(
+  File "/Users/oyvind/.local/share/rtx/installs/python/3.10.13/lib/python3.10/functools.py", line 889, in wrapper
+    return dispatch(args[0].__class__)(*args, **kw)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/vector/utils/numpy_utils.py", line 59, in _concatenate_base
+    return np.stack(items, axis=0, out=out)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/numpy/core/shape_base.py", line 456, in stack
+    return _nx.concatenate(expanded_arrays, axis=axis, out=out,
+ValueError: Output array has wrong dimensionality

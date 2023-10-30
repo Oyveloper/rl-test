@@ -1,0 +1,12 @@
+/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/gymnasium/wrappers/record_video.py:94: UserWarning: [33mWARN: Overwriting existing videos at /Users/oyvind/code/skole/master/rl-test/videos/ppo-mountain-car-continuous folder (try specifying a different `video_folder` for the `RecordVideo` wrapper if this is not desired)
+  logger.warn(
+Traceback (most recent call last):
+  File "/Users/oyvind/code/skole/master/rl-test/mountain_car.py", line 141, in <module>
+    action, logprob, _, value = agent.sample_action(next_obs)
+  File "/Users/oyvind/code/skole/master/rl-test/models/PPO.py", line 67, in sample_action
+    return action, probs.log_prob(action).sum(1), probs.entropy().sum(1), self.get_value(state)
+  File "/Users/oyvind/code/skole/master/rl-test/models/PPO.py", line 53, in get_value
+    return self.critic(state)
+  File "/Users/oyvind/code/skole/master/rl-test/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1265, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'PPO' object has no attribute 'critic'
