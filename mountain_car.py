@@ -17,48 +17,108 @@ os.environ["IMAGEIO_FFMPEG_EXE"] = "/opt/homebrew/bin/ffmpeg"
 
 seed = 2
 
+
 def parse_args():
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--num_steps", type=int, default=2048)
     parser.add_argument("--num_epochs", type=int, default=10)
-    parser.add_argument("--total-timesteps", type=int, default=2000000,
-        help="total timesteps of the experiments")
-    parser.add_argument("--gae", type=lambda x: bool(strtobool(x)), default=True, nargs="?", const=True,
-        help="Use GAE for advantage computation")
-    parser.add_argument("--gamma", type=float, default=0.99,
-        help="the discount factor gamma")
-    parser.add_argument("--gae-lambda", type=float, default=0.95,
-        help="the lambda for the general advantage estimation")
-    parser.add_argument("--num-minibatches", type=int, default=32,
-        help="the number of mini-batches")
-    parser.add_argument("--update-epochs", type=int, default=10,
-        help="the K epochs to update the policy")
-    parser.add_argument("--norm-adv", type=lambda x: bool(strtobool(x)), default=True, nargs="?", const=True,
-        help="Toggles advantages normalization")
-    parser.add_argument("--clip-coef", type=float, default=0.2,
-        help="the surrogate clipping coefficient")
-    parser.add_argument("--clip-vloss", type=lambda x: bool(strtobool(x)), default=True, nargs="?", const=True,
-        help="Toggles whether or not to use a clipped loss for the value function, as per the paper.")
-    parser.add_argument("--ent-coef", type=float, default=0.0,
-        help="coefficient of the entropy")
-    parser.add_argument("--vf-coef", type=float, default=0.5,
-        help="coefficient of the value function")
-    parser.add_argument("--max-grad-norm", type=float, default=0.5,
-        help="the maximum norm for the gradient clipping")
-    parser.add_argument("--target-kl", type=float, default=None,
-        help="the target KL divergence threshold")
-    parser.add_argument("--anneal-lr", type=bool, default=True,
-        help="the target KL divergence threshold")
-    parser.add_argument("--learning-rate", type=float, default=3e-4,
-        help="the learning rate of the optimizer")
-    parser.add_argument("--num-envs", type=int, default=5,
-        help="the number of parallel game environments")
+    parser.add_argument(
+        "--total-timesteps",
+        type=int,
+        default=2000000,
+        help="total timesteps of the experiments",
+    )
+    parser.add_argument(
+        "--gae",
+        type=lambda x: bool(strtobool(x)),
+        default=True,
+        nargs="?",
+        const=True,
+        help="Use GAE for advantage computation",
+    )
+    parser.add_argument(
+        "--gamma", type=float, default=0.99, help="the discount factor gamma"
+    )
+    parser.add_argument(
+        "--gae-lambda",
+        type=float,
+        default=0.95,
+        help="the lambda for the general advantage estimation",
+    )
+    parser.add_argument(
+        "--num-minibatches", type=int, default=32, help="the number of mini-batches"
+    )
+    parser.add_argument(
+        "--update-epochs",
+        type=int,
+        default=10,
+        help="the K epochs to update the policy",
+    )
+    parser.add_argument(
+        "--norm-adv",
+        type=lambda x: bool(strtobool(x)),
+        default=True,
+        nargs="?",
+        const=True,
+        help="Toggles advantages normalization",
+    )
+    parser.add_argument(
+        "--clip-coef",
+        type=float,
+        default=0.2,
+        help="the surrogate clipping coefficient",
+    )
+    parser.add_argument(
+        "--clip-vloss",
+        type=lambda x: bool(strtobool(x)),
+        default=True,
+        nargs="?",
+        const=True,
+        help="Toggles whether or not to use a clipped loss for the value function, as per the paper.",
+    )
+    parser.add_argument(
+        "--ent-coef", type=float, default=0.0, help="coefficient of the entropy"
+    )
+    parser.add_argument(
+        "--vf-coef", type=float, default=0.5, help="coefficient of the value function"
+    )
+    parser.add_argument(
+        "--max-grad-norm",
+        type=float,
+        default=0.5,
+        help="the maximum norm for the gradient clipping",
+    )
+    parser.add_argument(
+        "--target-kl",
+        type=float,
+        default=None,
+        help="the target KL divergence threshold",
+    )
+    parser.add_argument(
+        "--anneal-lr",
+        type=bool,
+        default=True,
+        help="the target KL divergence threshold",
+    )
+    parser.add_argument(
+        "--learning-rate",
+        type=float,
+        default=3e-4,
+        help="the learning rate of the optimizer",
+    )
+    parser.add_argument(
+        "--num-envs",
+        type=int,
+        default=5,
+        help="the number of parallel game environments",
+    )
     args = parser.parse_args()
     args.batch_size = int(args.num_envs * args.num_steps)
     args.minibatch_size = int(args.batch_size // args.num_minibatches)
     # fmt: on
     return args
+
 
 def make_env(seed, idx, capture_video, run_name):
     def thunk():
@@ -78,10 +138,10 @@ def make_env(seed, idx, capture_video, run_name):
 
     return thunk
 
+
 run_name = "ppo-mountain-car-continuous"
 
 total_num_episodes = int(6e3)
-
 
 
 torch.manual_seed(seed)
@@ -99,14 +159,16 @@ wandb.init(
 writer = SummaryWriter(f"runs/{run_name}")
 writer.add_text(
     "hyperparameters",
-    "|param|value|\n|-|-|\n%s" % ("\n".join([f"|{key}|{value}|" for key, value in vars(args).items()])),
+    "|param|value|\n|-|-|\n%s"
+    % ("\n".join([f"|{key}|{value}|" for key, value in vars(args).items()])),
 )
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(device)
 
- # env setup
+# env setup
 envs = gym.vector.SyncVectorEnv(
-    [make_env(seed + i, i, True, run_name) for i in range(args.num_envs)]
+    [make_env(seed + i, i, False, run_name) for i in range(args.num_envs)]
 )
 
 obs_space_dims = np.prod(envs.single_observation_space.shape)
@@ -119,8 +181,12 @@ lr = args.learning_rate
 optimizer = torch.optim.Adam(agent.parameters(), lr=lr, eps=1e-5)
 
 
-obs = torch.zeros((args.num_steps, args.num_envs) + envs.single_observation_space.shape).to(device)
-actions = torch.zeros((args.num_steps, args.num_envs) + envs.single_action_space.shape).to(device)
+obs = torch.zeros(
+    (args.num_steps, args.num_envs) + envs.single_observation_space.shape
+).to(device)
+actions = torch.zeros(
+    (args.num_steps, args.num_envs) + envs.single_action_space.shape
+).to(device)
 logprobs = torch.zeros((args.num_steps, args.num_envs)).to(device)
 rewards = torch.zeros((args.num_steps, args.num_envs)).to(device)
 dones = torch.zeros((args.num_steps, args.num_envs)).to(device)
@@ -153,26 +219,21 @@ for update in range(1, num_updates + 1):
         actions[step] = action
         logprobs[step] = logprob
 
-
-        # Prediction
-        with torch.no_grad():
-            action, logprob, _, value = agent.sample_action(next_obs)
-            values[step] = value.flatten()
-        actions[step] = action
-        logprobs[step] = logprob
-
         # Apply the action and get the next_obs and reward
         next_obs, reward, done, truncated, info = envs.step(action.cpu().numpy())
         rewards[step] = torch.tensor(reward).to(device).view(-1)
-        next_obs, next_done = torch.Tensor(next_obs).to(device), torch.Tensor(done).to(device)
-
-
+        next_obs, next_done = torch.Tensor(next_obs).to(device), torch.Tensor(done).to(
+            device
+        )
 
         # for item in info:
         #     if "episode" in item.keys():
-        #         print(f"global_step={global_step}, episodic_return={item['episode']['r']}")
-        #         writer.add_scalar("charts/episodic_return", item["episode"]["r"], global_step)
-        #         writer.add_scalar("charts/episodic_length", item["episode"]["l"], global_step)
+        #         writer.add_scalar(
+        #             "charts/episodic_return", item["episode"]["r"], global_step
+        #         )
+        #         writer.add_scalar(
+        #             "charts/episodic_length", item["episode"]["l"], global_step
+        #         )
         #         break
 
         with torch.no_grad():
@@ -187,8 +248,15 @@ for update in range(1, num_updates + 1):
                     else:
                         nextnonterminal = 1.0 - dones[t + 1]
                         nextvalues = values[t + 1]
-                    delta = rewards[t] + args.gamma * nextvalues * nextnonterminal - values[t]
-                    advantages[t] = lastgaelam = delta + args.gamma * args.gae_lambda * nextnonterminal * lastgaelam
+                    delta = (
+                        rewards[t]
+                        + args.gamma * nextvalues * nextnonterminal
+                        - values[t]
+                    )
+                    advantages[t] = lastgaelam = (
+                        delta
+                        + args.gamma * args.gae_lambda * nextnonterminal * lastgaelam
+                    )
                 returns = advantages + values
 
         # flatten the batch
@@ -211,7 +279,9 @@ for update in range(1, num_updates + 1):
                 mb_inds = b_inds[start:end]
 
                 # Do a forward, but still use the previous sampled action
-                _, newlogprob, entropy, newvalue = agent.sample_action(b_obs[mb_inds], b_actions[mb_inds])
+                _, newlogprob, entropy, newvalue = agent.sample_action(
+                    b_obs[mb_inds], b_actions[mb_inds]
+                )
                 # calc prob ratio
                 logratio = newlogprob - b_logprobs[mb_inds]
                 ratio = logratio.exp()
@@ -220,18 +290,22 @@ for update in range(1, num_updates + 1):
                     # calculate approx_kl http://joschu.net/blog/kl-approx.html
                     # old_approx_kl = (-logratio).mean()
                     approx_kl = ((ratio - 1) - logratio).mean()
-                    clipfracs += [((ratio - 1.0).abs() > args.clip_coef).float().mean().item()]
+                    clipfracs += [
+                        ((ratio - 1.0).abs() > args.clip_coef).float().mean().item()
+                    ]
 
                 mb_advantages = b_advantages[mb_inds]
                 if args.norm_adv:
-                    mb_advantages = (mb_advantages - mb_advantages.mean()) / (mb_advantages.std() + 1e-8)
-
+                    mb_advantages = (mb_advantages - mb_advantages.mean()) / (
+                        mb_advantages.std() + 1e-8
+                    )
 
                 # Policy loss
                 pg_loss1 = -mb_advantages * ratio
-                pg_loss2 = -mb_advantages * torch.clamp(ratio, 1 - args.clip_coef, 1 + args.clip_coef)
+                pg_loss2 = -mb_advantages * torch.clamp(
+                    ratio, 1 - args.clip_coef, 1 + args.clip_coef
+                )
                 pg_loss = torch.max(pg_loss1, pg_loss2).mean()
-
 
                 # Value loss
                 newvalue = newvalue.view(-1)
@@ -266,7 +340,9 @@ for update in range(1, num_updates + 1):
         explained_var = np.nan if var_y == 0 else 1 - np.var(y_true - y_pred) / var_y
 
         # TRY NOT TO MODIFY: record rewards for plotting purposes
-        writer.add_scalar("charts/learning_rate", optimizer.param_groups[0]["lr"], global_step)
+        writer.add_scalar(
+            "charts/learning_rate", optimizer.param_groups[0]["lr"], global_step
+        )
         writer.add_scalar("losses/value_loss", v_loss.item(), global_step)
         writer.add_scalar("losses/policy_loss", pg_loss.item(), global_step)
         writer.add_scalar("losses/entropy", entropy_loss.item(), global_step)
@@ -274,18 +350,10 @@ for update in range(1, num_updates + 1):
         writer.add_scalar("losses/clipfrac", np.mean(clipfracs), global_step)
         writer.add_scalar("losses/explained_variance", explained_var, global_step)
         # print("SPS:", int(global_step / (time.time() - start_time)))
-        writer.add_scalar("charts/SPS", int(global_step / (time.time() - start_time)), global_step)
-
+        writer.add_scalar(
+            "charts/SPS", int(global_step / (time.time() - start_time)), global_step
+        )
 
     agent.save("models/ppo-mountain-car-continuous")
     envs.close()
     writer.close()
-
-
-
-
-
-
-
-
-
