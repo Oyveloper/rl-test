@@ -13,9 +13,6 @@ import tyro
 from torch.distributions.normal import Normal
 from torch.utils.tensorboard import SummaryWriter
 
-from diffusion import Diffusion
-from mlp import MLP
-
 
 @dataclass
 class Args:
@@ -126,32 +123,35 @@ class Agent(nn.Module):
             nn.Tanh(),
             layer_init(nn.Linear(64, 1), std=1.0),
         )
-        state_dim = np.prod(envs.single_observation_space.shape)
-        action_dim = np.prod(envs.single_action_space.shape)
-
-        self.model = MLP(state_dim, action_dim, device="cuda")
-        self.actor = Diffusion(state_dim, action_dim, self.model, np.inf)
+        self.actor_mean = nn.Sequential(
+            layer_init(
+                nn.Linear(np.array(envs.single_observation_space.shape).prod(), 64)
+            ),
+            nn.Tanh(),
+            layer_init(nn.Linear(64, 64)),
+            nn.Tanh(),
+            layer_init(
+                nn.Linear(64, np.prod(envs.single_action_space.shape)), std=0.01
+            ),
+        )
+        self.actor_logstd = nn.Parameter(
+            torch.zeros(1, np.prod(envs.single_action_space.shape))
+        )
 
     def get_value(self, x):
         return self.critic(x)
 
-    def get_action(self, x, estimate=True):
-        if estimate:
-            return self.actor.sample_estimate(x)
-        else:
-            return self.actor.sample(x)
-
-    def get_action_and_value(self, x, action=None, estimate=False):
-        action_pred = self.get_action(x, estimate)
+    def get_action_and_value(self, x, action=None):
+        action_mean = self.actor_mean(x)
+        action_logstd = self.actor_logstd.expand_as(action_mean)
+        action_std = torch.exp(action_logstd)
+        probs = Normal(action_mean, action_std)
         if action is None:
-            action = action_pred
-
-        # Estimate the log rpob as - ||action - action_pred||^2
-        log_prob = -((action - action_pred) ** 2).sum(1)
+            action = probs.sample()
         return (
             action,
-            log_prob,
-            torch.ones_like(log_prob),
+            probs.log_prob(action).sum(1),
+            probs.entropy().sum(1),
             self.critic(x),
         )
 
@@ -302,7 +302,7 @@ if __name__ == "__main__":
                 mb_inds = b_inds[start:end]
 
                 _, newlogprob, entropy, newvalue = agent.get_action_and_value(
-                    b_obs[mb_inds], b_actions[mb_inds], estimate=True
+                    b_obs[mb_inds], b_actions[mb_inds]
                 )
                 logratio = newlogprob - b_logprobs[mb_inds]
                 ratio = logratio.exp()
